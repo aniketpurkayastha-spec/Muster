@@ -2,8 +2,8 @@
 
 K Explore · Web Designing task. Browse upcoming campus events, search and filter them, view details and register.
 
-**Live site:**https://github.com/aniketpurkayastha-spec
-**Repo:** https://github.com/aniketpurkayastha-spec?tab=repositories
+**Live site:**https://aniketpurkayastha-spec.github.io/Muster/
+**Repo:** https://github.com/aniketpurkayastha-spec/Muster
 
 ## Features
 - Hero section with a live countdown to the next event
