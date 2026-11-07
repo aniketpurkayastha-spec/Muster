@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muster – Events in Bhubaneswar</title>
+<meta name="description" content="Browse, search and register for upcoming events in Bhubaneswar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="logo" href="#top"><span class="mark">m</span>muster</a>
+    <div class="links" role="navigation" aria-label="Main">
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="acts">
+      <button id="themeBtn" class="icon-btn" aria-label="Switch to dark mode">☾</button>
+      <a class="btn small" href="#mine">My registrations <span id="regCount" class="pill">0</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow live"><span class="dot"></span>GOOD THINGS HAPPEN WHEN YOU SHOW UP</div>
+        <h1><b>Make room for</b><span class="light">something</span><em>worth it.</em></h1>
+        <p>Gigs, hackathons, art shows and morning runs across Bhubaneswar. Find one, register in a minute.</p>
+        <a class="btn" href="#events">Browse events</a>
+      </div>
+      <aside class="ticket" aria-label="Next event countdown">
+        <p class="t-label">Next up</p>
+        <h2 id="nextTitle">…</h2>
+        <p id="nextMeta" class="t-meta"></p>
+        <div class="digits">
+          <div><b id="cd-d">00</b><span>days</span></div>
+          <div><b id="cd-h">00</b><span>hours</span></div>
+          <div><b id="cd-m">00</b><span>mins</span></div>
+          <div><b id="cd-s">00</b><span>secs</span></div>
+        </div>
+        <button id="nextBtn" class="btn lime">Register for this one</button>
+      </aside>
+    </div>
+  </section>
+
+  <section id="events" class="wrap">
+    <h2>Find your <em>thing.</em></h2>
+    <div class="tools">
+      <label class="search"><span class="sr">Search events</span>
+        <input id="search" type="search" placeholder="Search events, venues, vibes">
+      </label>
+      <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+    </div>
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden>
+      <h3>No events found</h3><p>Try another search or category.</p>
+      <button id="clear" class="btn">Clear filters</button>
+    </div>
+  </section>
+
+  <section id="mine" class="wrap">
+    <h2>My <em>registrations.</em></h2>
+    <ul id="myList" class="mylist"></ul>
+    <p id="myEmpty" class="muted">Nothing yet. Pick an event above and it shows up here.</p>
+  </section>
+
+  <section class="manifesto" id="about">
+    <div class="m-in">
+      <div class="m-mark" aria-hidden="true">m.</div>
+      <div>
+        <p class="eyebrow">✦ A NOTE FROM US</p>
+        <h2>Life happens<br><em>in the in-between.</em></h2>
+      </div>
+      <div class="m-copy">
+        <p>The chat after the talk. The song you didn't know you needed. The stranger who turns into a friend.</p>
+        <p>Muster makes it easier to find the moments that make life feel a little more alive.</p>
+        <a class="tlink" href="#events">Go make a memory <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="m-in n-in">
+      <div>
+        <p class="eyebrow">✳ THE GOOD NEWSLETTER</p>
+        <h2>Plans worth<br><em>looking forward to.</em></h2>
+      </div>
+      <form id="newsForm" novalidate>
+        <label for="newsEmail">A little inspiration, straight to your inbox.</label>
+        <div class="news-line">
+          <input id="newsEmail" type="email" placeholder="Your email address" autocomplete="email">
+          <button type="submit" aria-label="Subscribe">↗</button>
+        </div>
+        <small id="newsMsg" role="status">No spam. Just the good stuff.</small>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="m-in c-in">
+      <div>
+        <p class="eyebrow">✺ SAY HELLO</p>
+        <h2>Come find us,<br><em>or just say hi.</em></h2>
+      </div>
+      <div class="contact-grid">
+        <a class="c-card" href="tel:+919876543210"><span class="spark">↗</span><span class="ico">☎</span><small class="eyebrow">CALL US</small><b>+91 98765 43210</b><small>Mon–Sat · 10 AM – 6 PM</small></a>
+        <a class="c-card" href="mailto:hello@muster.example"><span class="spark">↗</span><span class="ico">✉</span><small class="eyebrow">EMAIL US</small><b>hello@muster.example</b><small>We reply within a day</small></a>
+        <div class="c-card"><span class="spark">✦</span><span class="ico">⌖</span><small class="eyebrow">VISIT US</small><b>Plot 42, Patia Square</b><small>Bhubaneswar, Odisha 751024</small></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Muster · Built for K Explore Web Designing · Registrations are saved in your browser only</footer>
+
+<dialog id="modal" aria-labelledby="mTitle">
+  <button class="close" id="closeBtn" aria-label="Close">×</button>
+  <div id="mImg" class="m-img"></div>
+  <div class="m-body">
+    <p id="mCat" class="cat"></p>
+    <h3 id="mTitle"></h3>
+    <p id="mMeta" class="muted"></p>
+    <p id="mDesc"></p>
+
+    <form id="form" novalidate>
+      <h4>Save your spot</h4>
+      <div class="field"><label for="name">Full name</label>
+        <input id="name" autocomplete="name" placeholder="e.g. Alex Morgan"><small class="err" id="e-name"></small></div>
+      <div class="field"><label for="email">Email address</label>
+        <input id="email" type="email" autocomplete="email" placeholder="alex@example.com"><small class="err" id="e-email"></small></div>
+      <div class="field"><label for="phone">Phone number</label>
+        <input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number"><small class="err" id="e-phone"></small></div>
+      <div class="field"><label for="evSelect">Event</label>
+        <select id="evSelect"></select><small class="err" id="e-ev"></small></div>
+      <button class="btn lime" type="submit">Confirm registration</button>
+    </form>
+
+    <div id="done" hidden>
+      <h4>You're on the list ✓</h4>
+      <p id="doneMsg"></p>
+      <button class="btn" id="doneBtn">Done</button>
+    </div>
+  </div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
